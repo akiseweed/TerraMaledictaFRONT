@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+header{
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    
+}
+header img{
+    max-width: 110px;
+    height: auto;
+    margin-top: 75px ;
+}
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 0 20px; /* Agregar espacio en los bordes */
+        justify-content: space-between; /*   
+    }
+    header img {
+        max-width: 50px; /* Reducir el tamaño del logo */
+        margin-top: 0; /* Eliminar el margen superior */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header img {
+        max-width: 30px; /* Reducir aún más el tamaño del logo */
+        justify-content: space-between;
+        display: none;
+        
+    }
+    button {
+        justify-content: space-between;
+        justify-items: center;
+    }
+}
