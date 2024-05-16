@@ -1,41 +1,139 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 header{
-    width: 1140px;
-    max-width: 80%;
+    /* width: 1140px; */
+    /* max-width: 80%; */
     margin: auto;
     height: 50px;
+    justify-content: space-between;
     display: flex;
     align-items: center;
     position: relative;
     z-index: 100;
-    
+    display: flex;
+    align-items: center;
 }
 header img{
     max-width: 110px;
     height: auto;
-    margin-top: 75px ;
+    margin-top: 75px;
+    display: flex;
 }
+.nav-list{
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+
+}
+.abrir-menu{
+    display: none;
+}
+.cerrar-menu{
+    display: none;
+}
+
+ @media only screen and (max-width: 1440) {
+    header {
+        padding: 0 20px; 
+        justify-content: space-between; 
+    }
+    
+    .nav-list{
+        list-style-type: none;
+        display: flex;
+        gap: 1rem;
+    }
+    .nav-list a{
+        text-decoration: none;
+        color: black;
+    }
+    
+}
+
 @media only screen and (max-width: 768px) {
     header {
-        padding: 0 20px; /* Agregar espacio en los bordes */
-        justify-content: space-between; /*   
+        padding: 0 20px; 
+        justify-content: space-between; 
+    }
+    
+    .nav-list{
+        list-style-type: none;
+        display: flex;
+        gap: 1rem;
+    }
+    .nav-list a{
+        text-decoration: none;
+        color: black;
+    }
+} 
+
+@media only screen and (max-width: 480px) {
+    .abrir-menu{
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .nav{
+        display: none;
     }
     header img {
-        max-width: 50px; /* Reducir el tamaño del logo */
-        margin-top: 0; /* Eliminar el margen superior */
+        max-width: 30px; 
+        justify-content: space-between;
+    }    
+    header img{
+        max-width: 110px;
+        height: auto;
+        margin-top: 75px;
+        display: flex;
+    }
+    .abrir-menu{
+            display: block;
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem; 
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: black;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        opacity: 0;
+        visibility: hidden;
+        /* bottom: 0; */
+    }
+    .nav-list{
+        flex-direction: column;
+        align-items: end;
+    }
+    .nav-list li a{
+        color: white;
+    }
+    .cerrar-menu{
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;    
+    }
+    .nav.visibility{
+        opacity: 1;
+        visibility: visible;
     }
 }
 
-@media only screen and (max-width: 480px) {
-    header img {
-        max-width: 30px; /* Reducir aún más el tamaño del logo */
-        justify-content: space-between;
-        display: none;
-        
-    }
-    button {
-        justify-content: space-between;
-        justify-items: center;
-    }
-}
+    
+     
+
